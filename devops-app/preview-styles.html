@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperçu des Styles - DevOps Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .style-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .style-card h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .style-card h3 {
+            color: #667eea;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        .style-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .style-card li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .style-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .usage {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .usage h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .usage p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid white;
+        }
+
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .instructions h2 {
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .instructions ol {
+            color: #555;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin: 10px 0;
+        }
+
+        code {
+            background: #f8f9fa;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aperçu des Styles CSS</h1>
+            <p class="subtitle">Deux designs professionnels au choix pour votre Dashboard DevOps</p>
+        </header>
+
+        <div class="comparison">
+            <!-- Style Default -->
+            <div class="style-card">
+                <h2>Style Default</h2>
+                <p>Design moderne et dynamique avec animations fluides</p>
+
+                <div class="color-palette">
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="color-swatch" style="background: #4CAF50;"></div>
+                    <div class="color-swatch" style="background: #FF6B6B;"></div>
+                    <div class="color-swatch" style="background: #4ECDC4;"></div>
+                </div>
+
+                <h3>Caractéristiques</h3>
+                <ul>
+                    <li>Dégradés colorés prononcés</li>
+                    <li>Animations dynamiques au survol</li>
+                    <li>Ombres portées marquées</li>
+                    <li>Design énergique et moderne</li>
+                    <li>Parfait pour démonstrations</li>
+                </ul>
+
+                <div class="usage">
+                    <h4>Utilisation Recommandée</h4>
+                    <p>
+                        Idéal pour les présentations dynamiques, démonstrations publiques, 
+                        portfolios créatifs. Style parfait pour attirer l'attention et montrer 
+                        le côté innovant de votre projet DevOps.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Style Professional -->
+            <div class="style-card">
+                <h2>Style Professional</h2>
+                <p>Design épuré inspiré des dashboards d'entreprise</p>
+
+                <div class="color-palette">
+                    <div class="color-swatch" style="background: #667eea;"></div>
+                    <div class="color-swatch" style="background: #10b981;"></div>
+                    <div class="color-swatch" style="background: #1a202c;"></div>
+                    <div class="color-swatch" style="background: #e2e8f0;"></div>
+                </div>
+
+                <h3>Caractéristiques</h3>
+                <ul>
+                    <li>Variables CSS personnalisables</li>
+                    <li>Système de design cohérent</li>
+                    <li>Animations subtiles</li>
+                    <li>Style corporate épuré</li>
+                    <li>Optimisé pour production</li>
+                </ul>
+
+                <div class="usage">
+                    <h4>Utilisation Recommandée</h4>
+                    <p>
+                        Parfait pour environnements corporate, applications d'entreprise, 
+                        présentations formelles. Design professionnel qui inspire confiance 
+                        et sérieux dans un contexte business.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>Comment Changer de Style</h2>
+            <ol>
+                <li>
+                    <strong>Naviguez dans le dossier src :</strong>
+                    <br><code>cd devops-app/src</code>
+                </li>
+                <li>
+                    <strong>Sauvegardez le style actuel :</strong>
+                    <br><code>mv App.css App-Default.css</code>
+                </li>
+                <li>
+                    <strong>Activez le style professionnel :</strong>
+                    <br><code>mv App-Professional.css App.css</code>
+                </li>
+                <li>
+                    <strong>Relancez l'application :</strong>
+                    <br><code>npm start</code>
+                </li>
+                <li>
+                    <strong>Admirez le nouveau design !</strong>
+                </li>
+            </ol>
+
+            <h3 style="margin-top: 30px; color: #333;">Personnalisation</h3>
+            <p style="color: #555; line-height: 1.8;">
+                Les deux styles sont entièrement personnalisables. Consultez le fichier 
+                <code>GUIDE_STYLES.md</code> pour des instructions détaillées sur la 
+                personnalisation des couleurs, espacements, et autres propriétés visuelles.
+            </p>
+
+            <h3 style="margin-top: 30px; color: #333;">Compatibilité</h3>
+            <p style="color: #555; line-height: 1.8;">
+                Les deux thèmes sont entièrement responsive et compatibles avec tous les 
+                navigateurs modernes (Chrome, Firefox, Safari, Edge). Testés sur desktop, 
+                tablet, et mobile.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
